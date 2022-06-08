@@ -1,0 +1,80 @@
+<%- include('partials/header')-%>
+
+<div class="container">
+      
+    <div class="card_signup ">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+      <h4 class="card-title  text-center">Create Account</h4>
+      <p class="text-center">Get started with your free account</p>
+      <p>
+        <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
+        <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
+      </p>
+      <p class="divider-text">
+            <span class="bg-light">OR</span>
+        </p>
+      <form method="POST" action="/signup">
+        <%if(err.username){%>
+          <h4 style="text-align: center;"> <%=err.username%></h4>
+          <%}%>
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+         </div>
+         
+            <input name="username" id="username" class=" form-control" placeholder="Full name" type="text">
+        </div> <!-- form-group// --> 
+        <%if(err.email){%>
+          <h4 style="text-align: center;"> <%=err.email%></h4>
+          <%}%>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+
+            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+         </div>
+            <input name="email" class="form-control" placeholder="Email address" >
+        </div> <!-- form-group// --> 
+        <%if(err.number){%>
+          <h4 style="text-align: center;"> <%=err.number%></h4>
+          <%}%>
+         
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+        </div>
+        <select class="custom-select" style="max-width: 120px;">
+            <option selected="">+002</option>
+            <option value="1">+966</option>
+            <option value="2">+198</option>
+            <option value="3">+701</option>
+        </select>
+          <input name="number" class="form-control" placeholder="Phone number" type="text">
+          
+        </div> <!-- form-group// -->
+        <%if(err.password){%>
+          <h4 style="text-align: center;"> <%=err.password%></h4>
+          <%}%>
+        <div class="form-group input-group">
+      </div> <!-- form-group end.// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+        </div>
+            <input class="form-control Cpass" name="password" placeholder="Create password" type="password">
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+        </div>
+            <input class="form-control Rpass" placeholder="Repeat password" type="password">
+        </div> <!-- form-group// -->                                      
+        <div class="form-group">
+            <button type="submit" class="btn btn_submit btn-primary btn-block"> Create Account  </button>
+        </div> <!-- form-group// -->      
+        <p class="text-center">Have an account? <a href="./signin">Log In</a> </p>                                                                 
+    </form>
+    </article>
+    </div> <!-- card.// -->
+    
+    </div> 
+<%- include('partials/footer')-%>

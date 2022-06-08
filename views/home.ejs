@@ -1,0 +1,13 @@
+<%- include('partials/header')-%>
+<div class="welcome">
+<%if(user){%>
+    <h1 class="ml-3">welcome back, <%=user.username%></h1>
+    <form action="/logout" method="POST">
+    <button class="btn btn-danger">Log out</button></a>
+</form>
+<%}else {%>
+   <h1 class="ml-3">welcome to blog me new user</h1> 
+   <%}%>
+</div>
+   
+<%- include('partials/footer')-%>

@@ -1,0 +1,44 @@
+<%- include('partials/header')-%>
+<div class="container">
+   
+  
+
+    <div class="card_signup ">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+      <h4 class="card-title  text-center">Log In With Your Account</h4>
+      <p>
+        <a href="" class="btn btn-block btn-twitter"> <i class="fab fa-twitter"></i>   Login via Twitter</a>
+        <a href="" class="btn btn-block btn-facebook"> <i class="fab fa-facebook-f"></i>   Login via facebook</a>
+      </p>
+      <p class="divider-text">
+            <span class="bg-light">OR</span>
+        </p>
+        
+        <%if(messages.error){%>
+        <h4 style="text-align: center;"> <%=messages.error%></h4>
+        <%}%>
+        
+  
+        <form method="POST" action="signin">
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+         </div>
+            <input name="email" class="form-control" type="email" placeholder="Email address">
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+        </div>
+            <input class="form-control" type="password" id="password" name="password" placeholder="enter password" >
+        </div> <!-- form-group// -->                                      
+        <div class="form-group">
+            <button type="submit" class="btn btn_submit btn-block"> LogIn  </button>
+        </div> <!-- form-group// -->      
+        <p class="text-center">Don't have an account? <a href="./signup">Sign Up</a> </p>                                                                 
+    </form>
+    </article>
+    </div> <!-- card.// -->
+    
+    </div> 
+<%- include('partials/footer')-%>

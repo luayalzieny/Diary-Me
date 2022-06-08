@@ -1,0 +1,33 @@
+<%- include('partials/header')-%>
+
+<%if(blog.length==0){%>
+<h1 class="ml-2">No Blogs Exist</h1>
+<br>
+<h3 class="ml-2">Your Posted Blogs Will Appear here</h3>
+<%}else{%>
+<%blog.forEach(function(post){%>
+ <div class="blog" style=" border-radius: 20px" >
+  
+    <h3 class="ml-2"> <%=post.title%></h3>
+    <br>
+  
+    <div class="row" style="margin: 0;padding: 0;"> 
+    
+        <div> 
+            <h5 class="ml-2"><%=post.post%></h5>
+        </div>
+      
+        <div class="ml-5"> 
+              <!-- <form class="" method="POST" action="/deletePost"> -->
+              <input name="deletion" class="deletion" type="hidden" value="<%=post.id%>">
+              <button class="btn btn-primary" onclick="deleteProd(this)" type="button">Delete</button>
+              <!-- </form> -->
+        </div>
+    </div>
+  </div>
+    
+        
+<%})%>
+<%}%>
+<script src="../Public/JS/script.js"></script>
+<%- include('partials/footer')-%>

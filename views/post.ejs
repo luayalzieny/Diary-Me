@@ -1,0 +1,15 @@
+<%- include('partials/header')-%>
+<form method="POST" action="/post">
+    <h2 class="h2post">Here you can post all your thoughts</h2>
+<label class="postlabel"><h4>Your Title Here</h4></label><br>
+<input type="text" class="textTitle" name="title" placeholder="Title">
+<br>
+
+<label class="postlabel"><h4>Your Thoughts Here</h4></label><br>
+<textarea class="textPost" placeholder="Your Thoughts" name="text"></textarea><br>
+<button style="margin-left: 1%;" class="btn btn-lg btn_submit" type="submit">Post</button>
+
+
+</form>
+
+<%- include('partials/footer')-%>

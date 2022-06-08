@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="generator" content="Hugo 0.79.0">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbars/">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet"  href="./../../Public/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <!-- animate -->
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>BlogMe</title>
+    
+  </head>
+  <body>
+    <nav class="navy navbar navbar-expand-lg ">
+      <div class="container-fluid">  
+      <a class="navbar-brand" href="/">BlogME</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse"  id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto" >
+            <a class="nav-item nav-link active" href="/"><p>Home</p> </a>
+            
+            <a class="nav-item nav-link" href="./../about_us"><p>AboutUs</p></a>
+           <% if(!user||user=="undefined"){%>
+            <a class="nav-item nav-link " href="./../signup"><p>SignUp</p></a>
+            <a class="nav-item nav-link " href="./../signin"><p>SignIn</p></a>
+            <%}else{%>
+              <a class="nav-item nav-link " href="./../myblog"><p>MyBlogs</p></a>
+              <a class="nav-item nav-link" href="./../post"><p>Post</p></a>
+              
+            <%}%>
+          </div>
+        </div>
+      </div>
+      </nav>
+    
+      <!-- ? Preloader Start -->
+   <!-- <div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text ">
+                <img src="" alt="loader">
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- Preloader end -->
