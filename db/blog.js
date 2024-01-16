@@ -1,23 +1,27 @@
-const Sequelize=require('sequelize');
+// Importing Sequelize library
+const Sequelize = require('sequelize');
+// Importing the Sequelize instance for MySQL database
+const sequelize = require('./../util/mySqlDb');
 
-const sequelize=require('./../util/mySqlDb');
-
-const post=sequelize.define('blog',{
-    id:{
-        type:Sequelize.INTEGER,
-        allowNull:false,
-        autoIncrement:true,
-        primaryKey:true
+// Defining a Sequelize model named 'post' for the 'blog' table
+//made up of id,title,post and userid
+const post = sequelize.define('blog', {
+    id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        autoIncrement: true,
+        primaryKey: true
     },
-    title:{
-        type:Sequelize.STRING,
-        // allowNull:false,
+    title: {
+        type: Sequelize.STRING,
     },
-    post:{
-        type:Sequelize.STRING,
-        // allowNull:false,
+    post: {
+        type: Sequelize.STRING,
     },
-    // userId : {type: Sequelize.INTEGER},
+    userId: {
+        type: Sequelize.INTEGER,
+    },
 });
 
-module.exports=post;
+// Exporting the 'post' model for use in other parts of the application
+module.exports = post;
